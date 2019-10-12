@@ -1,0 +1,20 @@
+exection:
+  -- concurrency:50
+     hold-for: 3m
+     ramp-up: 2m
+
+     scenario: Choose Flight
+
+scenarios:
+  Choose Flight:
+    -- label: blazdemo
+      method: wget
+      url: reserve
+      method: POST
+      url: http://blazerdemo.com/reserve.php
+
+      body:
+        fromPort: Paris
+        toPort: Buenos Aires
+
+        
